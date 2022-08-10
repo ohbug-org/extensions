@@ -1,0 +1,3 @@
+.stop-btn {
+  @apply ml-1 pointer-events-auto transition hover:bg-opacity-30 hover:bg-gray-500;
+}

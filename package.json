@@ -1,0 +1,44 @@
+{
+  "name": "@ohbug/extensions",
+  "private": true,
+  "description": "The one-stop shop for official Ohbug extensions",
+  "license": "MIT",
+  "author": "chenyueban <jasonchan0527@gmail.com>",
+  "homepage": "https://github.com/ohbug-org/extensions",
+  "bugs": {
+    "url": "https://github.com/ohbug-org/extensions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ohbug-org/extensions"
+  },
+  "scripts": {
+    "version": "changeset && changeset version",
+    "publish": "pnpm run build && changeset publish",
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm -r --filter !playground run build",
+    "test": "vitest",
+    "lint": "eslint . --fix",
+    "preinstall": "npx only-allow pnpm",
+    "update:deps": "pnpm update -i -r --latest",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.24.2",
+    "@chenyueban/eslint-config": "^1.0.12",
+    "@chenyueban/tsconfig": "^2.1.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.21.0",
+    "husky": "^8.0.1",
+    "jsdom": "^20.0.0",
+    "lint-staged": "^13.0.3",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.2.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.5",
+    "vitest": "^0.21.1"
+  }
+}

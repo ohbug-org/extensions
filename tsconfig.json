@@ -1,0 +1,10 @@
+{
+  "extends": "@chenyueban/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./packages",
+    "paths": {
+      "@ohbug/*": ["packages/*/src"]
+    }
+  }
+}
