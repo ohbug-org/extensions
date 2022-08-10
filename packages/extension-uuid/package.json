@@ -1,6 +1,6 @@
 {
   "name": "@ohbug/extension-uuid",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Ohbug extension to add uuid",
   "license": "MIT",
   "author": "chenyueban <jasonchan0527@gmail.com>",
