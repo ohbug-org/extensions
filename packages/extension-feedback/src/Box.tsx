@@ -1,7 +1,6 @@
 import type { Component } from 'solid-js'
 import { Show, createEffect, createSignal } from 'solid-js'
 import { getOhbugObject, getSelector } from '@ohbug/utils'
-import html2canvas from 'html2canvas'
 import Selector from './Selector'
 import { Close, Screen } from './assets'
 import { setStore, store } from './store'
@@ -25,15 +24,13 @@ const Box: Component = () => {
     const ohbugClient = getOhbugObject().client
     if (store.selectedElement) {
       const event = { target: store.selectedElement } as unknown as Event
-      const canvas = await html2canvas(store.selectedElement)
-      const dataURL = canvas.toDataURL('image/jpeg', 0.01)
 
       selector = getSelector(event)
       outerHTML = store.selectedElement.outerHTML
       const ohbugEvent = ohbugClient.createEvent({
         category: 'feedback',
         type: 'feedback',
-        detail: { selector, outerHTML, feedback: feedback(), dataURL },
+        detail: { selector, outerHTML, feedback: feedback() },
       })
       await ohbugClient.notify(ohbugEvent)
     }

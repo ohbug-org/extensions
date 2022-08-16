@@ -24,6 +24,7 @@ const Selector: Component = () => {
 
   function handleSelecting(element?: Element | null) {
     if (!element) return
+    if (element.tagName === 'HTML') return
 
     const { width, height, top, right, bottom, left }
       = element.getBoundingClientRect()
@@ -77,6 +78,7 @@ const Selector: Component = () => {
 
   function handleSelected(element?: Element | null) {
     if (!element) return
+    if (element.tagName === 'HTML') return
 
     const { width, height, top, left } = element.getBoundingClientRect()
     setStore({ selectedElement: element })
@@ -100,7 +102,7 @@ const Selector: Component = () => {
       e.clientY,
     ) as HTMLElement
 
-    if (target?.dataset?.ohbugSelector !== undefined) {
+    if (target?.dataset?.ohbugSelector !== undefined || target.tagName === 'HTML') {
       return false
     }
 
@@ -117,7 +119,7 @@ const Selector: Component = () => {
       e.clientX,
       e.clientY,
     ) as HTMLElement
-    if (target?.dataset?.ohbugSelector !== undefined) {
+    if (target?.dataset?.ohbugSelector !== undefined || target.tagName === 'HTML') {
       return false
     }
     if (store.selectedElement && store.working) {
