@@ -22,19 +22,26 @@ const Box: Component = () => {
 
     let selector: string
     let outerHTML: string
+    const ohbugClient = getOhbugObject().client
     if (store.selectedElement) {
       const event = { target: store.selectedElement } as unknown as Event
       const canvas = await html2canvas(store.selectedElement)
-      const dataURL = canvas.toDataURL()
+      const dataURL = canvas.toDataURL('image/jpeg', 0.01)
 
       selector = getSelector(event)
       outerHTML = store.selectedElement.outerHTML
-      const ohbug = getOhbugObject()
-      const ohbugClient = ohbug.client
       const ohbugEvent = ohbugClient.createEvent({
         category: 'feedback',
         type: 'feedback',
         detail: { selector, outerHTML, feedback: feedback(), dataURL },
+      })
+      await ohbugClient.notify(ohbugEvent)
+    }
+    else {
+      const ohbugEvent = ohbugClient.createEvent({
+        category: 'feedback',
+        type: 'feedback',
+        detail: { feedback: feedback() },
       })
       await ohbugClient.notify(ohbugEvent)
     }
