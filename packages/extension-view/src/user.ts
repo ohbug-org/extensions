@@ -38,23 +38,23 @@ export const LocalStorageWithExpires = {
 
 /**
  * initial page view 触发时同时触发
- * 先从 cookie 内取值
- * 没有值     => 创建 cookie 并记一次 uv
+ * 先从 storage 内取值
+ * 没有值     => 创建 storage 并记一次 uv
  * 有值(当天) => 不动
- * 有值(昨天) => 更新 cookie 并记一次 uv
+ * 有值(昨天) => 更新 storage 并记一次 uv
  * 有值(明天) => 不动 (不应出现这个情况)
  */
 function createUserView(path: string) {
   const value = LocalStorageWithExpires.getItem(NAME)
 
-  // 没有值 => 创建 cookie 并记一次 uv
+  // 没有值 => 创建 storage 并记一次 uv
   if (!value) {
     LocalStorageWithExpires.setItem(NAME, dayjs().toISOString())
     sendUserView(path)
   }
   else {
     const parsedValue = dayjs(value)
-    // 有值(昨天) => 更新 cookie 并记一次 uv
+    // 有值(昨天) => 更新 storage 并记一次 uv
     if (parsedValue.isBefore(dayjs(), 'day')) {
       LocalStorageWithExpires.setItem(NAME, dayjs().toISOString())
       sendUserView(path)

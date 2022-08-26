@@ -16,7 +16,7 @@ Ohbug extension to collect view data
 ## Installation
 
 ```
-pnpm i view @ohbug/extension-view
+pnpm i @ohbug/extension-view
 ```
 
 ## Usage

@@ -7,7 +7,7 @@ import OhbugExtensionView from '../../packages/extension-view'
 import OhbugExtensionWebVitals from '../../packages/extension-web-vitals'
 
 export const client = Ohbug.setup({
-  apiKey: 'cdb74ebbcd3fe3878b0a26247d2a6d78b196d5940312527e6d10f612b6261b67',
+  apiKey: '52ec8631e1583957f7abb5216ec7512e6824aab90eb2307a1f6ed7cf5f33f8d3',
   appType: 'react',
   appVersion: __APP_VERSION__,
 })
