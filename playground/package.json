@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ohbug/browser": "^2.0.7",
+    "@ohbug/browser": "^2.3.0",
     "@ohbug/core": "^2.1.0",
     "@ohbug/react": "^2.0.6",
     "@ohbug/types": "^2.1.0",
@@ -15,9 +15,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
-    "vite": "^3.0.3"
+    "@vitejs/plugin-react": "^2.1.0",
+    "vite": "^3.1.0"
   }
 }

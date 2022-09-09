@@ -1,6 +1,6 @@
 import type { OhbugClient, OhbugExtension } from '@ohbug/types'
 import type { Metric } from 'web-vitals'
-import { getCLS, getFCP, getFID, getLCP, getTTFB } from 'web-vitals'
+import { onCLS, onFCP, onFID, onLCP, onTTFB } from 'web-vitals'
 
 function createNotifier(client: OhbugClient) {
   let isSent = false
@@ -50,11 +50,11 @@ const extension: OhbugExtension = {
   name: 'OhbugExtensionWebVitals',
   onSetup: (client) => {
     const notify = createNotifier(client)
-    getCLS(notify)
-    getFCP(notify)
-    getFID(notify)
-    getLCP(notify)
-    getTTFB(notify)
+    onCLS(notify)
+    onFCP(notify)
+    onFID(notify)
+    onLCP(notify)
+    onTTFB(notify)
   },
 }
 
