@@ -1,5 +1,11 @@
 # @ohbug/extension-uuid
 
+## 2.0.9
+
+### Patch Changes
+
+- release
+
 ## 2.0.8
 
 ### Patch Changes

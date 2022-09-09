@@ -1,5 +1,11 @@
 # @ohbug/extension-feedback
 
+## 0.6.1
+
+### Patch Changes
+
+- release
+
 ## 0.6.0
 
 ### Minor Changes

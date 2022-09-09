@@ -1,5 +1,11 @@
 # @ohbug/extension-rrweb
 
+## 1.9.0
+
+### Minor Changes
+
+- release
+
 ## 1.8.1
 
 ### Patch Changes
