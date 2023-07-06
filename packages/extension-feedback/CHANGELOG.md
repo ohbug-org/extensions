@@ -1,5 +1,11 @@
 # @ohbug/extension-feedback
 
+## 0.6.2
+
+### Patch Changes
+
+- update deps
+
 ## 0.6.1
 
 ### Patch Changes

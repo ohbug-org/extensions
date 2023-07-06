@@ -1,5 +1,11 @@
 # @ohbug/extension-rrweb
 
+## 1.9.1
+
+### Patch Changes
+
+- update deps
+
 ## 1.9.0
 
 ### Minor Changes
