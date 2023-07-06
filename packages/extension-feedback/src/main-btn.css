@@ -1,3 +1,0 @@
-.main-btn {
-  @apply rounded cursor-pointer flex bg-blue-500 h-8 shadow text-white z-max transition right-8 bottom-8 w-10 fixed select-none items-center justify-center hover:bg-blue-600 hover:shadow-xl;
-}

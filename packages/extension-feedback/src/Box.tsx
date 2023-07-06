@@ -5,9 +5,6 @@ import Selector from './Selector'
 import { Close, Screen } from './assets'
 import { setStore, store } from './store'
 
-import './main-btn.css'
-import './send-btn.css'
-
 const Box: Component = () => {
   const [visible, setVisible] = createSignal(false)
   const [feedback, setFeedback] = createSignal('')
@@ -65,7 +62,7 @@ const Box: Component = () => {
 
   return (
     <div
-      className="z-max relative"
+      class="z-max relative"
       data-ohbug-selector
     >
       <Show when={store.working}>
@@ -75,7 +72,7 @@ const Box: Component = () => {
       <div>
         <Show when={!(store.working && !store.selectedElement)}>
           <button
-            className="main-btn"
+            class="btn-main"
             data-ohbug-selector
             onClick={() => setVisible(v => !v)}
             type="button"
@@ -86,16 +83,16 @@ const Box: Component = () => {
 
         <Show when={visible()}>
           <div
-            className="bg-white flex flex-col h-60 shadow z-max right-8 bottom-20 w-80 fixed"
+            class="bg-white flex flex-col h-60 shadow z-max right-8 bottom-20 w-80 fixed"
             data-ohbug-selector
           >
             <div
-              className="bg-gray-300 p-4"
+              class="bg-gray-300 p-4"
               data-ohbug-selector
             >
               <textarea
-                autoFocus
-                className="bg-transparent outline-none w-full resize-none"
+                autofocus
+                class="bg-transparent outline-none w-full resize-none"
                 data-ohbug-selector
                 maxLength="1000"
                 onInput={e => setFeedback(e.currentTarget.value)}
@@ -104,7 +101,7 @@ const Box: Component = () => {
                 value={feedback()}
               />
               <button
-                className="cursor-pointer"
+                class="cursor-pointer"
                 data-ohbug-selector
                 onClick={handleStartWork}
                 style={
@@ -117,16 +114,16 @@ const Box: Component = () => {
             </div>
 
             <div
-              className="flex flex-1 p-4 justify-between items-center"
+              class="flex flex-1 p-4 justify-between items-center"
               data-ohbug-selector
             >
               <span
-                className="text-sm"
+                class="text-sm"
                 data-ohbug-selector
               >
                 Try
                 <a
-                  className="ml-1 underline"
+                  class="ml-1 underline"
                   data-ohbug-selector
                   href="https://ohbug.net"
                   rel="noreferrer"
@@ -137,7 +134,7 @@ const Box: Component = () => {
                 ?
               </span>
               <button
-                className="send-btn"
+                class="btn-send"
                 data-ohbug-selector
                 disabled={!feedback() || loading()}
                 onClick={handleFinish}
@@ -148,7 +145,7 @@ const Box: Component = () => {
             </div>
 
             <button
-              className="rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
+              class="rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
               data-ohbug-selector
               onClick={() => setVisible(v => !v)}
               type="button"

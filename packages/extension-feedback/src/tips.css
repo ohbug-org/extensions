@@ -1,3 +1,0 @@
-.tips {
-  @apply rounded-b-lg flex bg-blue-500 text-white text-sm z-max p-3 transform top-0 left-2/4 -translate-x-2/4 fixed select-none items-center;
-}

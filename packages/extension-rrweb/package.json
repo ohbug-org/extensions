@@ -34,11 +34,12 @@
     "rrweb": "^2.0.0"
   },
   "dependencies": {
-    "@ohbug/core": "^2.1.0",
-    "@ohbug/types": "^2.1.0"
+    "@ohbug/core": "^2.1.1",
+    "@ohbug/types": "^2.1.1",
+    "@rrweb/types": "2.0.0-alpha.9"
   },
   "devDependencies": {
-    "rrweb": "^2.0.0-alpha.1"
+    "rrweb": "^2.0.0-alpha.4"
   },
   "publishConfig": {
     "access": "public"

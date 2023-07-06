@@ -42,18 +42,16 @@ function Trigger() {
     throw new Error('is Render error')
   }
 
-  else {
-    return (
-      <div>
-        <button onClick={onClickAbnormalXhr}>异常XHR</button>
-        <button onClick={onClickAbnormalFetch}>异常Fetch</button>
-        <button onClick={onClickTriggerUnhandledrejection}>Promise错误</button>
-        <button onClick={onClickTriggerCodeError}>代码错误</button>
-        <button onClick={onClickCustomLog}>自定义log</button>
-        <button onClick={onClickRenderError}>render错误</button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <button onClick={onClickAbnormalXhr}>异常XHR</button>
+      <button onClick={onClickAbnormalFetch}>异常Fetch</button>
+      <button onClick={onClickTriggerUnhandledrejection}>Promise错误</button>
+      <button onClick={onClickTriggerCodeError}>代码错误</button>
+      <button onClick={onClickCustomLog}>自定义log</button>
+      <button onClick={onClickRenderError}>render错误</button>
+    </div>
+  )
 }
 
 function App() {

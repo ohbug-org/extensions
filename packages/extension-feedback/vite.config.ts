@@ -2,7 +2,6 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
 import dts from 'vite-plugin-dts'
-import windiCSS from 'vite-plugin-windicss'
 import libInjectCss from './libInjectCss'
 
 const name = 'OhbugExtensionFeedback'
@@ -19,7 +18,6 @@ export default defineConfig({
   plugins: [
     solidPlugin(),
     dts({ include: ['src/**/*'] }),
-    windiCSS(),
     libInjectCss(),
   ],
 })

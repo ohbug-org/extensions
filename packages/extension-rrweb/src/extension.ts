@@ -1,6 +1,6 @@
 import type { OhbugExtension } from '@ohbug/types'
+import type { eventWithTime } from '@rrweb/types'
 import { pack, record } from 'rrweb'
-import type { eventWithTime } from 'rrweb/typings/types'
 
 const eventsMatrix: eventWithTime[][] = [[]]
 const extension: OhbugExtension = {

@@ -1,4 +1,4 @@
-import 'virtual:windi.css'
+import './index.css'
 import type { OhbugExtension } from '@ohbug/types'
 import { render } from 'solid-js/web'
 import Box from './Box'
