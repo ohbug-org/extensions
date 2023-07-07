@@ -24,5 +24,5 @@ import Ohbug from '@ohbug/browser'
 import OhbugExtensionUUID from '@ohbug/extension-uuid'
 
 const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
-client.use(OhbugExtensionUUID)
+client.use(OhbugExtensionUUID())
 ```

@@ -26,5 +26,5 @@ import Ohbug from '@ohbug/browser'
 import OhbugExtensionView from '@ohbug/extension-view'
 
 const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
-client.use(OhbugExtensionView)
+client.use(OhbugExtensionView())
 ```

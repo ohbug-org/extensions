@@ -3,15 +3,15 @@ import type { OhbugExtension } from '@ohbug/types'
 import { render } from 'solid-js/web'
 import Box from './Box'
 
-const extension: OhbugExtension = {
+const extension = (target?: HTMLElement): OhbugExtension => ({
   name: 'OhbugExtensionFeedback',
   onSetup: () => {
-    const target = document.createElement('div')
-    target.id = 'OhbugExtensionFeedback-ROOT'
-    document.body.appendChild(target)
+    const root = document.createElement('div')
+    root.id = 'OhbugExtensionFeedback-ROOT'
+    ;(target || document.body).appendChild(root)
 
-    render(() => <Box />, target)
+    render(() => <Box />, root)
   },
-}
+})
 
 export default extension

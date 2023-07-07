@@ -26,5 +26,21 @@ import Ohbug from '@ohbug/browser'
 import OhbugExtensionFeedback from '@ohbug/extension-feedback'
 
 const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
-client.use(OhbugExtensionFeedback)
+client.use(OhbugExtensionFeedback())
+```
+
+## Parameters
+
+### target?: HTMLElement
+
+You can customize the dom element to which the feedback popup is mounted, by default it will be mounted in the body.
+
+example:
+
+```javascript
+import Ohbug from '@ohbug/browser'
+import OhbugExtensionFeedback from '@ohbug/extension-feedback'
+
+const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
+client.use(OhbugExtensionFeedback(document.querySelector('#xxx')))
 ```

@@ -1,7 +1,7 @@
 import type { OhbugExtension } from '@ohbug/types'
 import { getUUID } from './uuid'
 
-export const extension: OhbugExtension = {
+export const extension = (): OhbugExtension => ({
   name: 'OhbugExtensionUUID',
   onEvent: (event) => {
     const uuid = getUUID()
@@ -9,3 +9,4 @@ export const extension: OhbugExtension = {
     return event
   },
 }
+)

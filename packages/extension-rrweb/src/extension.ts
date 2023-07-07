@@ -3,7 +3,7 @@ import type { eventWithTime } from '@rrweb/types'
 import { pack, record } from 'rrweb'
 
 const eventsMatrix: eventWithTime[][] = [[]]
-const extension: OhbugExtension = {
+const extension = (): OhbugExtension => ({
   name: 'OhbugExtensionRrweb',
   onSetup: () => {
     record({
@@ -30,6 +30,6 @@ const extension: OhbugExtension = {
     event.addMetadata('rrweb', events)
     return event
   },
-}
+})
 
 export default extension

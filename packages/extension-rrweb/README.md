@@ -26,5 +26,5 @@ import Ohbug from '@ohbug/browser'
 import OhbugExtensionRrweb from '@ohbug/extension-rrweb'
 
 const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
-client.use(OhbugExtensionRrweb)
+client.use(OhbugExtensionRrweb())
 ```

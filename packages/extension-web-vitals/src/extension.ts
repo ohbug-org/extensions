@@ -46,7 +46,7 @@ function createNotifier(client: OhbugClient) {
   return notify
 }
 
-const extension: OhbugExtension = {
+const extension = (): OhbugExtension => ({
   name: 'OhbugExtensionWebVitals',
   onSetup: (client) => {
     const notify = createNotifier(client)
@@ -56,6 +56,6 @@ const extension: OhbugExtension = {
     onLCP(notify)
     onTTFB(notify)
   },
-}
+})
 
 export default extension

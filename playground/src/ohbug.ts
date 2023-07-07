@@ -11,7 +11,7 @@ export const client = Ohbug.setup({
   appType: 'react',
   appVersion: __APP_VERSION__,
 })
-client.use(OhbugExtensionFeedback)
+client.use(OhbugExtensionFeedback())
 client.use(OhbugExtensionRrweb)
 client.use(OhbugExtensionUUID)
 client.use(OhbugExtensionView)

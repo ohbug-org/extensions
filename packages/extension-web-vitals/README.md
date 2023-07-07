@@ -26,5 +26,5 @@ import Ohbug from '@ohbug/browser'
 import OhbugExtensionWebVitals from '@ohbug/extension-web-vitals'
 
 const client = Ohbug.setup({ apiKey: 'YOUR_API_KEY' })
-client.use(OhbugExtensionWebVitals)
+client.use(OhbugExtensionWebVitals())
 ```
