@@ -4,13 +4,13 @@
 
 @layer components {
   .btn-main {
-    @apply rounded cursor-pointer flex bg-blue-500 h-8 shadow text-white z-max transition right-8 bottom-8 w-10 fixed select-none items-center justify-center hover:bg-blue-600 hover:shadow-xl;
+    @apply border-none rounded cursor-pointer flex bg-blue-500 h-8 shadow text-white z-max transition right-8 bottom-8 w-10 fixed select-none items-center justify-center hover:bg-blue-600 hover:shadow-xl;
   }
   .btn-send {
-    @apply bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1 rounded-sm text-sm text-white transition;
+    @apply border-none cursor-pointer bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1 rounded-sm text-sm text-white transition;
   }
   .btn-stop {
-    @apply ml-1 pointer-events-auto transition hover:bg-opacity-30 hover:bg-gray-500;
+    @apply border-none bg-transparent cursor-pointer ml-1 pointer-events-auto transition hover:bg-opacity-30 hover:bg-gray-500;
   }
   .tips {
     @apply rounded-b-lg flex bg-blue-500 text-white text-sm z-max p-3 transform top-0 left-2/4 -translate-x-2/4 fixed select-none items-center;

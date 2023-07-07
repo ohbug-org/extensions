@@ -180,7 +180,7 @@ const Selector: Component = () => {
             >
               Select element on the page
               <button
-                class="stop-btn"
+                class="btn-stop"
                 onClick={handleClose}
                 type="button"
               >
@@ -243,7 +243,7 @@ const Selector: Component = () => {
         >
           <Show when={store.selectedElement && store.working}>
             <button
-              class="rounded-full cursor-pointer flex bg-red-500 h-6 -top-3 -right-3 w-6 z-10 items-center justify-center absolute pointer-events-auto"
+              class="rounded-full border-none cursor-pointer flex bg-red-500 h-6 -top-3 -right-3 w-6 z-10 items-center justify-center absolute pointer-events-auto"
               data-ohbug-selector
               onClick={handleClose}
               type="button"

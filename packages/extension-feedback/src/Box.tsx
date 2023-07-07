@@ -92,7 +92,7 @@ const Box: Component = () => {
             >
               <textarea
                 autofocus
-                class="bg-transparent outline-none w-full resize-none"
+                class="bg-transparent outline-none border-none w-full resize-none"
                 data-ohbug-selector
                 maxLength="1000"
                 onInput={e => setFeedback(e.currentTarget.value)}
@@ -101,7 +101,7 @@ const Box: Component = () => {
                 value={feedback()}
               />
               <button
-                class="cursor-pointer"
+                class="cursor-pointer border-none bg-transparent"
                 data-ohbug-selector
                 onClick={handleStartWork}
                 style={
@@ -145,7 +145,7 @@ const Box: Component = () => {
             </div>
 
             <button
-              class="rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
+              class="border-none rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
               data-ohbug-selector
               onClick={() => setVisible(v => !v)}
               type="button"
