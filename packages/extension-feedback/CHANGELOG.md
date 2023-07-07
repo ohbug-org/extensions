@@ -1,5 +1,11 @@
 # @ohbug/extension-feedback
 
+## 0.7.2
+
+### Patch Changes
+
+- update button styles in extension-feedback components
+
 ## 0.7.1
 
 ### Patch Changes
