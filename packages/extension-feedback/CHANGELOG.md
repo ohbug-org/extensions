@@ -1,5 +1,11 @@
 # @ohbug/extension-feedback
 
+## 0.7.1
+
+### Patch Changes
+
+- fixed issue with Ohbug client not being destroyed properly
+
 ## 0.7.0
 
 ### Minor Changes

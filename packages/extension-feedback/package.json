@@ -1,6 +1,6 @@
 {
   "name": "@ohbug/extension-feedback",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Ohbug extension to collect user feedback",
   "license": "MIT",
   "author": "chenyueban <jasonchan0527@gmail.com>",

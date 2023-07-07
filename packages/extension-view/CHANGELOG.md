@@ -1,5 +1,11 @@
 # @ohbug/extension-view
 
+## 0.1.1
+
+### Patch Changes
+
+- fixed issue with Ohbug client not being destroyed properly
+
 ## 0.1.0
 
 ### Minor Changes

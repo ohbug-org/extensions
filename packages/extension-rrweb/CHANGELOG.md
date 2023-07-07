@@ -1,5 +1,11 @@
 # @ohbug/extension-rrweb
 
+## 1.10.1
+
+### Patch Changes
+
+- fixed issue with Ohbug client not being destroyed properly
+
 ## 1.10.0
 
 ### Minor Changes

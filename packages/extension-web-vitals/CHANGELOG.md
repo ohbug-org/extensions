@@ -1,5 +1,11 @@
 # @ohbug/extension-web-vitals
 
+## 0.2.1
+
+### Patch Changes
+
+- fixed issue with Ohbug client not being destroyed properly
+
 ## 0.2.0
 
 ### Minor Changes

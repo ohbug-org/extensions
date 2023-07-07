@@ -1,5 +1,11 @@
 # @ohbug/extension-uuid
 
+## 2.1.1
+
+### Patch Changes
+
+- fixed issue with Ohbug client not being destroyed properly
+
 ## 2.1.0
 
 ### Minor Changes
