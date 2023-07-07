@@ -1,5 +1,11 @@
 # @ohbug/extension-web-vitals
 
+## 0.2.0
+
+### Minor Changes
+
+- add function call parentheses to extensions
+
 ## 0.1.1
 
 ### Patch Changes

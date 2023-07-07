@@ -1,5 +1,11 @@
 # @ohbug/extension-uuid
 
+## 2.1.0
+
+### Minor Changes
+
+- add function call parentheses to extensions
+
 ## 2.0.10
 
 ### Patch Changes

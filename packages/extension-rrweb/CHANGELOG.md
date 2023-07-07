@@ -1,5 +1,11 @@
 # @ohbug/extension-rrweb
 
+## 1.10.0
+
+### Minor Changes
+
+- add function call parentheses to extensions
+
 ## 1.9.1
 
 ### Patch Changes

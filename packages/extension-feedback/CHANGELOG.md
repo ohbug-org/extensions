@@ -1,5 +1,11 @@
 # @ohbug/extension-feedback
 
+## 0.7.0
+
+### Minor Changes
+
+- add function call parentheses to extensions
+
 ## 0.6.2
 
 ### Patch Changes

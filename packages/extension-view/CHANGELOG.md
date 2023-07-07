@@ -1,5 +1,11 @@
 # @ohbug/extension-view
 
+## 0.1.0
+
+### Minor Changes
+
+- add function call parentheses to extensions
+
 ## 0.0.4
 
 ### Patch Changes
