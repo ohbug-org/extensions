@@ -34,8 +34,8 @@
     "rrweb": "^2.0.0"
   },
   "dependencies": {
-    "@ohbug/core": "^2.1.1",
-    "@ohbug/types": "^2.1.1",
+    "@ohbug/core": "^2.2.0",
+    "@ohbug/types": "^2.2.1",
     "@rrweb/types": "2.0.0-alpha.9"
   },
   "devDependencies": {

@@ -31,8 +31,8 @@
     "dev": "tsup --watch"
   },
   "dependencies": {
-    "@ohbug/types": "^2.1.1",
-    "@ohbug/utils": "^2.0.6",
+    "@ohbug/types": "^2.2.1",
+    "@ohbug/utils": "^2.0.8",
     "dayjs": "^1.11.9"
   },
   "publishConfig": {

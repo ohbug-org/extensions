@@ -1,12 +1,17 @@
 import type { OhbugExtension } from '@ohbug/types'
 import PageVisibility from './pageVisibility'
-import captureUrlChange from './urlChange'
+import captureUrlChange, { removeCaptureUrlChange } from './urlChange'
 
+let instance: PageVisibility | null = null
 const extension = (): OhbugExtension => ({
   name: 'OhbugExtensionView',
   onSetup: () => {
-    PageVisibility.capturePageVisibility()
+    instance = PageVisibility.capturePageVisibility()
     captureUrlChange()
+  },
+  onDestroy: () => {
+    removeCaptureUrlChange()
+    instance?.destroy()
   },
 })
 
