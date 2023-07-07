@@ -12,9 +12,9 @@ export const client = Ohbug.setup({
   appVersion: __APP_VERSION__,
 })
 client.use(OhbugExtensionFeedback())
-client.use(OhbugExtensionRrweb)
-client.use(OhbugExtensionUUID)
-client.use(OhbugExtensionView)
-client.use(OhbugExtensionWebVitals)
+client.use(OhbugExtensionRrweb())
+client.use(OhbugExtensionUUID())
+client.use(OhbugExtensionView())
+client.use(OhbugExtensionWebVitals())
 
 export { OhbugErrorBoundary }
