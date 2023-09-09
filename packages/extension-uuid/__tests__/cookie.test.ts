@@ -26,7 +26,7 @@ describe('@ohbug/extension-uuid/cookie', () => {
   })
 
   test('setItem: should add expires when sEnd is passed as Infinity', () => {
-    const result = docCookies.setItem(key, value, Infinity)
+    const result = docCookies.setItem(key, value, Number.POSITIVE_INFINITY)
     expect(result).toBe(`${target}; expires=Fri, 31 Dec 9999 23:59:59 GMT`)
   })
 

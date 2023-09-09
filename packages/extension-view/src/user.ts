@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { sendUserView } from './createEvent'
+import { sendUserView } from './create-event'
 
 const NAME = 'OhbugExtensionViewUV'
 

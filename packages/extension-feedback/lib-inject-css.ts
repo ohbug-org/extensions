@@ -1,6 +1,6 @@
-import fs from 'fs'
-import { resolve } from 'path'
-import type { PluginOption, ResolvedConfig } from 'vite'
+import fs from 'node:fs'
+import { resolve } from 'node:path'
+import { type PluginOption, type ResolvedConfig } from 'vite'
 
 const fileRegex = /\.(css)$/
 const injectCode = (code: string) =>
@@ -53,8 +53,8 @@ export default function libInjectCss(): PluginOption {
 
           fs.writeFileSync(filePath, data)
         }
-        catch (e) {
-          console.error(e)
+        catch (error) {
+          console.error(error)
         }
       }
     },

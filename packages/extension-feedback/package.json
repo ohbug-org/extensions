@@ -3,7 +3,6 @@
   "version": "0.7.2",
   "description": "Ohbug extension to collect user feedback",
   "license": "MIT",
-  "author": "chenyueban <jasonchan0527@gmail.com>",
   "homepage": "https://github.com/ohbug-org/extensions",
   "bugs": {
     "url": "https://github.com/ohbug-org/extensions/issues"
@@ -12,19 +11,23 @@
     "type": "git",
     "url": "https://github.com/ohbug-org/extensions"
   },
+  "author": "chenyueban <jasonchan0527@gmail.com>",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "vite build",
@@ -33,17 +36,14 @@
   "dependencies": {
     "@ohbug/types": "^2.2.1",
     "@ohbug/utils": "^2.0.8",
-    "solid-js": "^1.7.7"
+    "solid-js": "^1.7.11"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.25",
-    "tailwindcss": "^3.3.2",
-    "vite": "^4.4.1",
-    "vite-plugin-dts": "^3.1.0",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.3",
     "vite-plugin-solid": "^2.7.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

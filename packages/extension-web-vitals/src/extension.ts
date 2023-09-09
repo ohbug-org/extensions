@@ -1,6 +1,6 @@
-import type { OhbugClient, OhbugExtension } from '@ohbug/types'
-import type { Metric } from 'web-vitals'
 import { onCLS, onFCP, onFID, onINP, onLCP, onTTFB } from 'web-vitals'
+import { type OhbugClient, type OhbugExtension } from '@ohbug/types'
+import { type Metric } from 'web-vitals'
 
 function createNotifier(client: OhbugClient) {
   let isSent = false

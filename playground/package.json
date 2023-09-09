@@ -9,15 +9,22 @@
   "dependencies": {
     "@ohbug/browser": "^2.5.1",
     "@ohbug/core": "^2.2.1",
+    "@ohbug/extension-feedback": "workspace:*",
+    "@ohbug/extension-rrweb": "workspace:*",
+    "@ohbug/extension-uuid": "workspace:*",
+    "@ohbug/extension-view": "workspace:*",
+    "@ohbug/extension-web-vitals": "workspace:*",
     "@ohbug/react": "^2.0.9",
     "@ohbug/types": "^2.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rrweb": "^2.0.0-alpha.4",
+    "web-vitals": "^3.4.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@vitejs/plugin-react": "^4.0.2",
-    "vite": "^4.4.1"
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.9"
   }
 }

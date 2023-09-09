@@ -1,13 +1,13 @@
 import Ohbug from '@ohbug/browser'
 import { OhbugErrorBoundary } from '@ohbug/react'
-import OhbugExtensionFeedback from '../../packages/extension-feedback'
-import OhbugExtensionRrweb from '../../packages/extension-rrweb'
-import OhbugExtensionUUID from '../../packages/extension-uuid'
-import OhbugExtensionView from '../../packages/extension-view'
-import OhbugExtensionWebVitals from '../../packages/extension-web-vitals'
+import OhbugExtensionFeedback from '@ohbug/extension-feedback'
+import OhbugExtensionRrweb from '@ohbug/extension-rrweb'
+import OhbugExtensionUUID from '@ohbug/extension-uuid'
+import OhbugExtensionView from '@ohbug/extension-view'
+import OhbugExtensionWebVitals from '@ohbug/extension-web-vitals'
 
 export const client = Ohbug.setup({
-  apiKey: '002180b2825f612f40ae7cda02a6d466ec93adc2e707e8c63cabdedc37bdd130',
+  apiKey: 'f02773f08c2f580e4e8d2dfff7a533014a836dfa00c07bbfe6055273e63bda75',
   appType: 'react',
   appVersion: __APP_VERSION__,
 })

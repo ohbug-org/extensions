@@ -1,10 +1,10 @@
-import type { Component } from 'solid-js'
 import {
   Show,
   createEffect,
   createSignal,
   onCleanup,
 } from 'solid-js'
+import { type Component } from 'solid-js'
 import { setStore, store } from './store'
 import { Close } from './assets'
 
@@ -166,23 +166,23 @@ const Selector: Component = () => {
   return (
     <>
       <div
-        class="-z-1 fixed"
         data-ohbug-selector
+        class="-z-1 fixed"
       >
         <Show when={!store.selectedElement && store.working}>
           <div
-            class="bg-none border-solid border-4 border-blue-500 transition top-0 right-0 bottom-0 left-0 z-10 fixed pointer-events-none"
             data-ohbug-selector
+            class="bg-none border-solid border-4 border-blue-500 transition top-0 right-0 bottom-0 left-0 z-10 fixed pointer-events-none"
           >
             <div
-              class="tips"
               data-ohbug-selector
+              class="tips"
             >
               Select element on the page
               <button
                 class="btn-stop"
-                onClick={handleClose}
                 type="button"
+                onClick={handleClose}
               >
                 <Close />
               </button>
@@ -190,75 +190,65 @@ const Selector: Component = () => {
           </div>
         </Show>
         <div
-          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
+          ref={(el) => {
+            dimmerTop = el
+          }}
           data-ohbug-selector
-          ref={
-            (el) => {
-              dimmerTop = el
-            }
-          }
+          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
         />
         <div
-          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
+          ref={(el) => {
+            dimmerRight = el
+          }}
           data-ohbug-selector
-          ref={
-            (el) => {
-              dimmerRight = el
-            }
-          }
+          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
         />
         <div
-          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
+          ref={(el) => {
+            dimmerBottom = el
+          }}
           data-ohbug-selector
-          ref={
-            (el) => {
-              dimmerBottom = el
-            }
-          }
+          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
         />
         <div
-          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
+          ref={(el) => {
+            dimmerLeft = el
+          }}
           data-ohbug-selector
-          ref={
-            (el) => {
-              dimmerLeft = el
-            }
-          }
+          class="bg-black bg-opacity-40 transition -z-1 fixed pointer-events-none"
         />
 
         <div
+          ref={(el) => {
+            selector = el
+          }}
+          data-ohbug-selector
           class={
             `fixed -z-1 bg-black bg-opacity-20 border-4 rounded-sm transition cursor-pointer box-border pointer-events-none ${
               lastSelectedElement()
                 ? 'border-red-500 border-solid'
                 : 'border-blue-500 border-dashed'
-            }`
-          }
-          data-ohbug-selector
-          ref={
-            (el) => {
-              selector = el
-            }
+          }`
           }
         >
-          <Show when={store.selectedElement && store.working}>
+          <Show when={store.selectedElement ? store.working : null}>
             <button
-              class="rounded-full border-none cursor-pointer flex bg-red-500 h-6 -top-3 -right-3 w-6 z-10 items-center justify-center absolute pointer-events-auto"
               data-ohbug-selector
-              onClick={handleClose}
+              class="rounded-full border-none cursor-pointer flex bg-red-500 h-6 -top-3 -right-3 w-6 z-10 items-center justify-center absolute pointer-events-auto"
               type="button"
+              onClick={handleClose}
             >
               <Close />
             </button>
 
             <button
-              class="border-solid cursor-pointer font-semibold bg-red-500 border-4 border-red-500 -bottom-full text-white right-0 absolute pointer-events-auto"
               data-ohbug-selector
-              onClick={handleChange}
+              class="border-solid cursor-pointer font-semibold bg-red-500 border-4 border-red-500 -bottom-full text-white right-0 absolute pointer-events-auto"
+              type="button"
               style={
                 { transform: 'translate(4px, -8px)' }
               }
-              type="button"
+              onClick={handleChange}
             >
               Change
             </button>

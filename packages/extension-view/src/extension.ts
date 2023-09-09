@@ -1,6 +1,6 @@
-import type { OhbugExtension } from '@ohbug/types'
-import PageVisibility from './pageVisibility'
-import captureUrlChange, { removeCaptureUrlChange } from './urlChange'
+import { type OhbugExtension } from '@ohbug/types'
+import PageVisibility from './page-visibility'
+import captureUrlChange, { removeCaptureUrlChange } from './url-change'
 
 let instance: PageVisibility | null = null
 const extension = (): OhbugExtension => ({

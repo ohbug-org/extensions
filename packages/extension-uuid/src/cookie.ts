@@ -3,8 +3,8 @@ export const docCookies = {
   getItem(sKey: string): string | null {
     return (
       decodeURIComponent(document.cookie.replace(
-        new RegExp(`(?:(?:^|.*;)\\s*${encodeURIComponent(sKey).replace(
-          /[-.+*]/g,
+        new RegExp(`(?:(?:^|.*;)\\s*${encodeURIComponent(sKey).replaceAll(
+          /[*+.-]/g,
           '\\$&',
         )}\\s*\\=\\s*([^;]*).*$)|^.*$`),
         '$1',
@@ -19,14 +19,16 @@ export const docCookies = {
     sDomain?: string,
     bSecure?: boolean,
   ): string | false {
-    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false }
+    if (!sKey || /^(?:expires|max-age|path|domain|secure)$/i.test(sKey)) {
+      return false
+    }
 
     let sExpires = ''
     if (vEnd) {
       switch (vEnd.constructor) {
         case Number:
           sExpires
-            = vEnd === Infinity
+            = vEnd === Number.POSITIVE_INFINITY
               ? '; expires=Fri, 31 Dec 9999 23:59:59 GMT'
               : `; max-age=${vEnd}`
           break
@@ -48,7 +50,9 @@ export const docCookies = {
     return value
   },
   removeItem(sKey: string, sPath?: string, sDomain?: string) {
-    if (!sKey || !this.getItem(sKey)) { return false }
+    if (!sKey || !this.getItem(sKey)) {
+      return false
+    }
 
     document.cookie = `${encodeURIComponent(sKey)}=; expires=Thu, 01 Jan 1970 00:00:00 GMT${
       sDomain ? `; domain=${sDomain}` : ''

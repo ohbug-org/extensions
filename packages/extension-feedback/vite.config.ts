@@ -1,8 +1,8 @@
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
 import dts from 'vite-plugin-dts'
-import libInjectCss from './libInjectCss'
+import libInjectCss from './lib-inject-css'
 
 const name = 'OhbugExtensionFeedback'
 

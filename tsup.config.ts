@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'tsup'
 
 export default defineConfig(options => ({
@@ -8,4 +7,5 @@ export default defineConfig(options => ({
   format: ['esm', 'cjs'],
   target: 'es2017',
   minify: !options.watch,
+  external: ['rrweb', 'web-vitals'],
 }))

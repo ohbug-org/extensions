@@ -3,7 +3,6 @@
   "version": "1.10.1",
   "description": "Ohbug extension to 'screen recording'",
   "license": "MIT",
-  "author": "chenyueban <jasonchan0527@gmail.com>",
   "homepage": "https://github.com/ohbug-org/extensions",
   "bugs": {
     "url": "https://github.com/ohbug-org/extensions/issues"
@@ -12,19 +11,23 @@
     "type": "git",
     "url": "https://github.com/ohbug-org/extensions"
   },
+  "author": "chenyueban <jasonchan0527@gmail.com>",
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsup",
@@ -34,14 +37,11 @@
     "rrweb": "^2.0.0"
   },
   "dependencies": {
-    "@ohbug/core": "^2.2.0",
+    "@ohbug/core": "^2.2.1",
     "@ohbug/types": "^2.2.1",
-    "@rrweb/types": "2.0.0-alpha.9"
+    "@rrweb/types": "2.0.0-alpha.11"
   },
   "devDependencies": {
     "rrweb": "^2.0.0-alpha.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

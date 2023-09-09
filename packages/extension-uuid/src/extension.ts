@@ -1,4 +1,4 @@
-import type { OhbugExtension } from '@ohbug/types'
+import { type OhbugExtension } from '@ohbug/types'
 import { getUUID } from './uuid'
 
 export const extension = (): OhbugExtension => ({

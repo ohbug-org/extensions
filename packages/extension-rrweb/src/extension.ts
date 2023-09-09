@@ -1,6 +1,6 @@
-import type { OhbugExtension } from '@ohbug/types'
-import type { eventWithTime } from '@rrweb/types'
 import { pack, record } from 'rrweb'
+import { type OhbugExtension } from '@ohbug/types'
+import { type eventWithTime } from '@rrweb/types'
 
 const eventsMatrix: eventWithTime[][] = [[]]
 const extension = (): OhbugExtension => ({
@@ -11,8 +11,8 @@ const extension = (): OhbugExtension => ({
         if (isCheckout) {
           eventsMatrix.push([])
         }
-        const lastEvents = eventsMatrix[eventsMatrix.length - 1]
-        lastEvents.push(event)
+        const lastEvents = eventsMatrix.at(-1)
+        lastEvents?.push(event)
       },
       checkoutEveryNms: 1 * 60 * 1000,
       sampling: {

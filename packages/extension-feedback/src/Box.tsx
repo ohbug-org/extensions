@@ -1,6 +1,6 @@
-import type { Component } from 'solid-js'
 import { Show, createEffect, createSignal } from 'solid-js'
 import { getOhbugObject, getSelector } from '@ohbug/utils'
+import { type Component } from 'solid-js'
 import Selector from './Selector'
 import { Close, Screen } from './assets'
 import { setStore, store } from './store'
@@ -62,8 +62,8 @@ const Box: Component = () => {
 
   return (
     <div
-      class="z-max relative"
       data-ohbug-selector
+      class="z-max relative"
     >
       <Show when={store.working}>
         <Selector />
@@ -72,10 +72,10 @@ const Box: Component = () => {
       <div>
         <Show when={!(store.working && !store.selectedElement)}>
           <button
-            class="btn-main"
             data-ohbug-selector
-            onClick={() => setVisible(v => !v)}
+            class="btn-main"
             type="button"
+            onClick={() => setVisible(v => !v)}
           >
             {visible() ? '😆' : '🙂'}
           </button>
@@ -83,48 +83,48 @@ const Box: Component = () => {
 
         <Show when={visible()}>
           <div
-            class="bg-white flex flex-col h-60 shadow z-max right-8 bottom-20 w-80 fixed"
             data-ohbug-selector
+            class="bg-white flex flex-col h-60 shadow z-max right-8 bottom-20 w-80 fixed"
           >
             <div
-              class="bg-gray-300 p-4"
               data-ohbug-selector
+              class="bg-gray-300 p-4"
             >
               <textarea
                 autofocus
-                class="bg-transparent outline-none border-none w-full resize-none"
                 data-ohbug-selector
+                class="bg-transparent outline-none border-none w-full resize-none"
                 maxLength="1000"
-                onInput={e => setFeedback(e.currentTarget.value)}
                 placeholder="Tell me how you feel..."
                 rows="4"
                 value={feedback()}
+                onInput={e => setFeedback(e.currentTarget.value)}
               />
               <button
-                class="cursor-pointer border-none bg-transparent"
                 data-ohbug-selector
-                onClick={handleStartWork}
+                class="cursor-pointer border-none bg-transparent"
+                type="button"
                 style={
                   { '--color': store.selectedElement ? 'blue' : 'gray' }
                 }
-                type="button"
+                onClick={handleStartWork}
               >
                 <Screen />
               </button>
             </div>
 
             <div
-              class="flex flex-1 p-4 justify-between items-center"
               data-ohbug-selector
+              class="flex flex-1 p-4 justify-between items-center"
             >
               <span
-                class="text-sm"
                 data-ohbug-selector
+                class="text-sm"
               >
                 Try
                 <a
-                  class="ml-1 underline"
                   data-ohbug-selector
+                  class="ml-1 underline"
                   href="https://ohbug.net"
                   rel="noreferrer"
                   target="_blank"
@@ -134,21 +134,21 @@ const Box: Component = () => {
                 ?
               </span>
               <button
-                class="btn-send"
                 data-ohbug-selector
+                class="btn-send"
                 disabled={!feedback() || loading()}
-                onClick={handleFinish}
                 type="button"
+                onClick={handleFinish}
               >
                 {loading() ? 'Sending...' : 'Send'}
               </button>
             </div>
 
             <button
-              class="border-none rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
               data-ohbug-selector
-              onClick={() => setVisible(v => !v)}
+              class="border-none rounded-full cursor-pointer flex bg-blue-500 h-6 -top-2 -right-2 w-6 z-10 items-center justify-center absolute"
               type="button"
+              onClick={() => setVisible(v => !v)}
             >
               <Close />
             </button>

@@ -1,7 +1,0 @@
-{
-  "extends": ["@chenyueban", "plugin:solid/typescript"],
-  "plugins": ["solid"],
-  "rules": {
-    "react/no-unknown-property": "off"
-  }
-}

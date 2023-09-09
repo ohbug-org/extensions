@@ -6,7 +6,7 @@ class Session {
   timeout: number = DEFAULT_TIMEOUT
 
   constructor(timeout: number = DEFAULT_TIMEOUT) {
-    this.session = new Date().getTime()
+    this.session = Date.now()
     this.timeout = timeout
   }
 
@@ -19,7 +19,7 @@ class Session {
     if (!this.session) {
       throw new Error('Session 没有初始化')
     }
-    const now = new Date().getTime()
+    const now = Date.now()
     return this.session + this.timeout < now
   }
 
@@ -27,7 +27,7 @@ class Session {
     if (!this.session) {
       throw new Error('Session 没有初始化')
     }
-    const now = new Date().getTime()
+    const now = Date.now()
     this.session = now
     return this.session
   }

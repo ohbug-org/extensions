@@ -1,7 +1,7 @@
 import { getGlobal } from '@ohbug/utils'
 
 import Session from './session'
-import { sendPageView } from './createEvent'
+import { sendPageView } from './create-event'
 import createUserView from './user'
 
 const global = getGlobal<Window>()
@@ -80,11 +80,9 @@ class PageVisibility {
     }
 
     // 如果 visibilityState 由隐藏变为可见，并且自上次用户交互之后已经过了“足够长”的时间，就发送新的 Page View 统计
-    if (lastVisible === false && visible === true) {
-      if (session.isExpired()) {
-        sendPageView(global.location.href)
-        createUserView(global.location.href)
-      }
+    if (lastVisible === false && visible === true && session.isExpired()) {
+      sendPageView(global.location.href)
+      createUserView(global.location.href)
     }
 
     if (visible === false) {

@@ -1,6 +1,6 @@
 import { getGlobal, parseUrl, replace } from '@ohbug/utils'
 
-import { sendPageView } from './createEvent'
+import { sendPageView } from './create-event'
 
 const global = getGlobal<Window>()
 let lastHref: string | undefined
@@ -41,7 +41,8 @@ function historyReplacement(original: (data: any, title: string, url?: string) =
     if (url) {
       handleUrlChange(lastHref, String(url))
     }
-    return original.apply(this, [data, title, url])
+    // eslint-disable-next-line @typescript-eslint/no-invalid-this
+    return Reflect.apply(original, this, [data, title, url])
   }
 }
 
@@ -61,6 +62,7 @@ function historyListener() {
     'replaceState',
     historyReplacement,
   )
+  // eslint-disable-next-line unicorn/prefer-add-event-listener
   historyOriginal.onpopstate = replace(global, 'onpopstate', () => {
     const current = global?.location?.href
     handleUrlChange(lastHref, current)
@@ -86,6 +88,7 @@ export function removeCaptureUrlChange() {
   // history
   global.history.pushState = historyOriginal.pushState
   global.history.replaceState = historyOriginal.replaceState
+  // eslint-disable-next-line unicorn/prefer-add-event-listener
   global.onpopstate = historyOriginal.onpopstate
   // hash
   global?.removeEventListener?.('hashchange', hashListener, true)
