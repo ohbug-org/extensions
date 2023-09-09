@@ -1,5 +1,11 @@
 # @ohbug/extension-web-vitals
 
+## 0.2.2
+
+### Patch Changes
+
+- update deps
+
 ## 0.2.1
 
 ### Patch Changes
